@@ -1,0 +1,82 @@
+.navbar {
+  background: linear-gradient(90deg, #b1c7e3, #b1c7e3);
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Menü Listesi */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Menü Öğeleri */
+.navbar ul li {
+  margin: 0 25px;
+}
+
+/* Link Stili */
+.navbar ul li a {
+  color: rgb(48, 50, 92);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.navbar ul li a.active {
+  border-bottom: 3px solid white;
+}
+
+/* Hover Efekti */
+.navbar ul li a:hover {
+  background: rgba(81, 65, 124, 0.2);
+  transform: scale(1.1);
+}
+
+/* Aktif Sayfa Efekti */
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar ul li a:hover::after {
+  width: 60%;
+}
+
+/* Mobil Uyumluluk */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

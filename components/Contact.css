@@ -1,0 +1,211 @@
+body {
+    background: linear-gradient(to right, #c2e4e3, #c2e4e3);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: #2a3990;
+    margin-bottom: 15px;
+    position: relative;body {
+    background: linear-gradient(to right, #c2e4e3, #c2e4e3);
+}
+
+    display: inline-block;
+}
+
+.contact-header h1:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, #4a69bd, #6a89cc);
+    bottom: -10px;
+    left: 25%;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #4a69bd, #6a89cc);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.info-item i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.info-item h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info-item p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/* 🔹 Sosyal medya ikonları */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    background-color: white;
+    color: #4a69bd;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Form Alanı */
+.contact-form {
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    background-color: #ffffff;
+    border-color: #4a69bd;
+    box-shadow: 0 0 8px rgba(74, 105, 189, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #4a69bd, #6a89cc);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #3a59ad, #5a79bc);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 105, 189, 0.4);
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* 🔹 Responsive Tasarım */
+@media (max-width: 992px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-container {
+        padding: 30px 15px;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 25px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+}
